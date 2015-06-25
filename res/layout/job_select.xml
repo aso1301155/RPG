@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/flower">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/job_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="職業を選択してください"
+            android:textSize="28dp" />
+
+        <ImageButton
+            android:id="@+id/hito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/hito" />
+
+        <ImageButton
+            android:id="@+id/majo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/majo" />
+
+        <ImageButton
+            android:id="@+id/sensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/sensi" />
+
+    </LinearLayout>
+
+</LinearLayout>
