@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@drawable/flower"
     android:orientation="vertical" >
 
     <!-- 下メニュー -->
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/danjon_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:paddingLeft="80dp"
+        android:text="ダンジョン"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:typeface="serif" />
 
-        <TextView
-            android:id="@+id/danjon_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="80dp"
-            android:text="ダンジョン"
-            android:textSize="30dp"
-            android:textStyle="italic"
-            android:typeface="serif" />
-
-        <Button
-            android:id="@+id/densetutte"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="伝説って？" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/what_legend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="伝説って？" />
 
     <LinearLayout
         android:layout_width="fill_parent"
