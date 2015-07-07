@@ -38,15 +38,15 @@ public class Battle_Scene extends Activity {
 				//3回繰り返す
 				alpha.setInterpolator(new CycleInterpolator(3));
 
-				RotateAnimation rotate = new RotateAnimation(0, 360, img.getWidth()/2, img.getHeight()/2);
+				RotateAnimation rotate = new RotateAnimation(0, 360, 50, 50);
 				// imgの中心を軸に、0度から360度にかけて回転
-				rotate.setDuration(3000); // 3000msかけてアニメーションする
+				rotate.setDuration(500); // 500msかけてアニメーションする
 
-				ScaleAnimation scale = new ScaleAnimation(1, 0.5f, 1, 0.5f); // imgを1倍から0.5倍に縮小
-				scale.setDuration(3000); // 3000msかけてアニメーションする
+				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // imgを1倍から0.0倍に縮小
+				scale.setDuration(500); // 500msかけてアニメーションする
 
-				TranslateAnimation translate = new TranslateAnimation(0, 100, 0, 100); // (0,0)から(100,100)に移動
-				translate.setDuration(3000); // 3000msかけてアニメーションする
+				TranslateAnimation translate = new TranslateAnimation(0, 400, 0, 0); // (0,0)から(-500,0)に移動
+				translate.setDuration(500); // 500msかけてアニメーションする
 
 
 				switch (ran){
@@ -91,13 +91,13 @@ public class Battle_Scene extends Activity {
 
 				AnimationSet set = new AnimationSet(true);
 
-				RotateAnimation rotate = new RotateAnimation(0, 360, img.getWidth()/2, img.getHeight()/2); // imgの中心を軸に、0度から360度にかけて回転
+				RotateAnimation rotate = new RotateAnimation(0, 360, 70, 70); // imgの中心を軸に、0度から360度にかけて回転
 				set.addAnimation(rotate);
 
-				ScaleAnimation scale = new ScaleAnimation(1, 0.5f, 1, 0.5f); // imgを1倍から0.5倍に縮小
+				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // imgを1倍から0.5倍に縮小
 				set.addAnimation(scale);
 
-				set.setDuration(3000); // 3000msかけてアニメーションする
+				set.setDuration(1000); // 3000msかけてアニメーションする
 				img.startAnimation(set); // アニメーション適用
 
 
@@ -119,13 +119,8 @@ public class Battle_Scene extends Activity {
 
 				case 3:
 
-					img.startAnimation(rotate); // アニメーション適用
-					break;
-
-				default:
 					img.startAnimation(set); // アニメーション適用
 					break;
-
 				}
 			}
 		});

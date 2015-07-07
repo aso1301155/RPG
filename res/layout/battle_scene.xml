@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/haikei_danjon"
     android:orientation="vertical" >
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/edge3" />
+        android:src="@drawable/th" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,8 +38,9 @@
     </LinearLayout>
 
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" >
 
         <TableRow
             android:id="@+id/tableRow1"
@@ -48,14 +49,14 @@
 
             <Button
                 android:id="@+id/battle"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="戦う"
                 android:textSize="40dp" />
 
             <Button
                 android:id="@+id/tool"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="道具"
                 android:textSize="40dp" />
@@ -68,14 +69,14 @@
 
             <Button
                 android:id="@+id/magic"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="魔法"
                 android:textSize="40dp" />
 
             <Button
                 android:id="@+id/escape"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="逃げる"
                 android:textSize="40dp" />
