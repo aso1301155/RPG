@@ -1,8 +1,12 @@
 package jp.ac.asojuku.jousen.rpg;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,5 +49,34 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO 自動生成されたメソッド・スタブ
+	    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+	    alertDialog.setTitle("アプリ終了");
+	    alertDialog.setMessage("終了しますか？");
+	    alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+	        public void onClick(DialogInterface dialog, int whichButton) {
+	            // ボタン押下時の処理
+	        	moveTaskToBack(true);
+	        }
+	    });
+	    alertDialog.setNegativeButton("Cansel", new OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO 自動生成されたメソッド・スタブ
+
+			}
+		});
+	    // キャンセルイベント
+	    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+	        public void onCancel(DialogInterface dialog) {
+	            // キャンセルの処理
+	        }
+	    });
+	    alertDialog.show();
+		return super.onKeyDown(keyCode, event);
 	}
 }
