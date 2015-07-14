@@ -11,6 +11,12 @@
         android:layout_marginTop="175dp"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
@@ -23,7 +29,7 @@
         </EditText>
 
         <Button
-            android:id="@+id/comit"
+            android:id="@+id/commit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="決定" />

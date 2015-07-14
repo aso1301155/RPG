@@ -14,7 +14,7 @@ public class New_Account extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.new_account);
 
-		Button comit = (Button)findViewById(R.id.comit);
+		Button comit = (Button)findViewById(R.id.commit);
 		comit.setOnClickListener(new View.OnClickListener() {
 
 			@Override
