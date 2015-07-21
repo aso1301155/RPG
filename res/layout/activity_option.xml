@@ -64,6 +64,12 @@
             android:layout_height="wrap_content"
             android:text="ニックネーム変更" />
 
+        <Button
+            android:id="@+id/button_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="データの初期化" />
+
     </LinearLayout>
 
 </RelativeLayout>

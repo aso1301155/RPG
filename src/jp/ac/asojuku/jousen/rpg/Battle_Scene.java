@@ -22,15 +22,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class Battle_Scene extends Activity {
+
+    private ProgressBar progressBar;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 自動生成されたメソッド・スタブ
+		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.battle_scene);
 
-        // 水平プログレスバーの最大値を設定します
-
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar_hp);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_hp);
         progressBar.setMax(100);
         progressBar.setProgress(100);
         progressBar.setSecondaryProgress(100);
@@ -42,66 +43,66 @@ public class Battle_Scene extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 自動生成されたメソッド・スタブ
+				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 				ImageView img = (ImageView) findViewById(R.id.imageView1);
 				Random rnd = new Random();
 				int ran = rnd.nextInt(4);
 
 				//AlphaAnimation(float fromAlpha, float toAlpha)
 				AlphaAnimation alpha = new AlphaAnimation(1, 0);
-				//1000msの間で
+				//1000ms縺ｮ髢薙〒
 				alpha.setDuration(1000);
-				//3回繰り返す
+				//3蝗樒ｹｰ繧願ｿ斐☆
 				alpha.setInterpolator(new CycleInterpolator(3));
 				img.startAnimation(alpha);
 
 				RotateAnimation rotate = new RotateAnimation(0, 360, 50, 50);
-				// imgの中心を軸に、0度から360度にかけて回転
-				rotate.setDuration(500); // 500msかけてアニメーションする
+				// img縺ｮ荳ｭ蠢・ｒ霆ｸ縺ｫ縲・蠎ｦ縺九ｉ360蠎ｦ縺ｫ縺九￠縺ｦ蝗櫁ｻ｢
+				rotate.setDuration(500); // 500ms縺九￠縺ｦ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺吶ｋ
 
-				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // imgを1倍から0.0倍に縮小
-				scale.setDuration(500); // 500msかけてアニメーションする
+				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // img繧・蛟阪°繧・.0蛟阪↓邵ｮ蟆・
+				scale.setDuration(500); // 500ms縺九￠縺ｦ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺吶ｋ
 
-				TranslateAnimation translate = new TranslateAnimation(0, 400, 0, 0); // (0,0)から(-500,0)に移動
-				translate.setDuration(500); // 500msかけてアニメーションする
+				TranslateAnimation translate = new TranslateAnimation(0, 400, 0, 0); // (0,0)縺九ｉ(-500,0)縺ｫ遘ｻ蜍・
+				translate.setDuration(500); // 500ms縺九￠縺ｦ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺吶ｋ
 
 /*
 				switch (ran){
 				case 0:
-					//アニメーションスタート
+					//繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ繧ｹ繧ｿ繝ｼ繝・
 					img.startAnimation(alpha);
 					break;
 
 				case 1:
 
-					img.startAnimation(rotate); // アニメーション適用
+					img.startAnimation(rotate); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				case 2:
 
-					img.startAnimation(scale); // アニメーション適用
+					img.startAnimation(scale); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				case 3:
 
-					img.startAnimation(translate); // アニメーション適用
+					img.startAnimation(translate); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				default:
-					img.startAnimation(alpha); // アニメーション適用
+					img.startAnimation(alpha); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				}
 */
-				//バーの最大値を取得
+				//繝舌・縺ｮ譛螟ｧ蛟､繧貞叙蠕・
 				int max = progressBar.getMax();
 
-				//バーの値を取得
+				//繝舌・縺ｮ蛟､繧貞叙蠕・
 				int prog = progressBar.getProgress();
 				progressBar.setProgress(prog - 10);
 				int prog2 = progressBar.getProgress();
 
-				//バーのセカンダリ値を取得
+				//繝舌・縺ｮ繧ｻ繧ｫ繝ｳ繝繝ｪ蛟､繧貞叙蠕・
 				int seco = progressBar.getSecondaryProgress();
 				progressBar.setSecondaryProgress(seco - 10);
 
@@ -116,42 +117,42 @@ public class Battle_Scene extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 自動生成されたメソッド・スタブ
+				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 				ImageView img = (ImageView) findViewById(R.id.imageView1);
 				Random rnd = new Random();
 				int ran = rnd.nextInt(4);
 
 				AnimationSet set = new AnimationSet(true);
 
-				RotateAnimation rotate = new RotateAnimation(0, 360, 70, 70); // imgの中心を軸に、0度から360度にかけて回転
+				RotateAnimation rotate = new RotateAnimation(0, 360, 70, 70); // img縺ｮ荳ｭ蠢・ｒ霆ｸ縺ｫ縲・蠎ｦ縺九ｉ360蠎ｦ縺ｫ縺九￠縺ｦ蝗櫁ｻ｢
 				set.addAnimation(rotate);
 
-				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // imgを1倍から0.5倍に縮小
+				ScaleAnimation scale = new ScaleAnimation(1, 0.0f, 1, 0.0f); // img繧・蛟阪°繧・.5蛟阪↓邵ｮ蟆・
 				set.addAnimation(scale);
 
-				set.setDuration(1000); // 3000msかけてアニメーションする
-				img.startAnimation(set); // アニメーション適用
+				set.setDuration(1000); // 3000ms縺九￠縺ｦ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺吶ｋ
+				img.startAnimation(set); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 
 
 				switch (ran){
 				case 0:
-					//アニメーションスタート
+					//繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ繧ｹ繧ｿ繝ｼ繝・
 					img.startAnimation(set);
 					break;
 
 				case 1:
 
-					img.startAnimation(rotate); // アニメーション適用
+					img.startAnimation(rotate); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				case 2:
 
-					img.startAnimation(scale); // アニメーション適用
+					img.startAnimation(scale); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 
 				case 3:
 
-					img.startAnimation(set); // アニメーション適用
+					img.startAnimation(set); // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ驕ｩ逕ｨ
 					break;
 				}
 			}
@@ -160,13 +161,13 @@ public class Battle_Scene extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO 自動生成されたメソッド・スタブ
+		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 	    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 	    alertDialog.setTitle("リタイア");
 	    alertDialog.setMessage("リタイアしますか？");
 	    alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 	        public void onClick(DialogInterface dialog, int whichButton) {
-	            // ボタン押下時の処理
+	            // 繝懊ち繝ｳ謚ｼ荳区凾縺ｮ蜃ｦ逅・
 	        	Intent intent = new Intent(Battle_Scene.this, Behavior_Select.class);
 	        	startActivity(intent);
 	        }
@@ -174,14 +175,14 @@ public class Battle_Scene extends Activity {
 	    alertDialog.setNegativeButton("Cansel", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO 自動生成されたメソッド・スタブ
+				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 
 			}
 		});
-	    // キャンセルイベント
+	    // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ繧､繝吶Φ繝・
 	    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 	        public void onCancel(DialogInterface dialog) {
-	            // キャンセルの処理
+	            // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ縺ｮ蜃ｦ逅・
 	        }
 	    });
 	    alertDialog.show();
