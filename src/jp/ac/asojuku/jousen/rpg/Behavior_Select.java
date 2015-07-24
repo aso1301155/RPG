@@ -24,7 +24,7 @@ public class Behavior_Select extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.behavior_select);
 
@@ -33,7 +33,7 @@ public class Behavior_Select extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent danjon_select = new Intent(Behavior_Select.this,Danjon_Select.class);
 				startActivity(danjon_select);
 			}
@@ -44,7 +44,7 @@ public class Behavior_Select extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent button_soubi = new Intent(Behavior_Select.this,Weapon.class);
 				startActivity(button_soubi);
 			}
@@ -55,7 +55,7 @@ public class Behavior_Select extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent intent = new Intent(Behavior_Select.this, Behavior_Select.class);
 				startActivity(intent);
 
@@ -66,7 +66,7 @@ public class Behavior_Select extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent danjon_select = new Intent(Behavior_Select.this,Danjon_Select.class);
 				startActivity(danjon_select);
 			}
@@ -77,7 +77,7 @@ public class Behavior_Select extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent intent = new Intent(Behavior_Select.this, OptionActivity.class);
 				startActivity(intent);
 			}
@@ -86,7 +86,7 @@ public class Behavior_Select extends Activity {
 
 	@Override
 	protected void onResume() {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 		super.onResume();
 		dbm = new DBManager(this);
 		sqlDB = dbm.getWritableDatabase();
@@ -125,7 +125,8 @@ public class Behavior_Select extends Activity {
 			Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.sensi);
 
 			img.setImageBitmap(bmp);
-		}else if(job.equals("魔道士")){
+
+		}else if(job.equals("魔導士")){
 			Resources res = getResources();
 			Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.majo);
 
@@ -135,27 +136,27 @@ public class Behavior_Select extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 	    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 	    alertDialog.setTitle("アプリ終了");
 	    alertDialog.setMessage("終了しますか？");
 	    alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 	        public void onClick(DialogInterface dialog, int whichButton) {
-	            // 繝懊ち繝ｳ謚ｼ荳区凾縺ｮ蜃ｦ逅・
+	            // 郢晄㈱縺｡郢晢ｽｳ隰夲ｽｼ闕ｳ蛹ｺ蜃ｾ邵ｺ�ｽｮ陷�ｽｦ騾�繝ｻ
 	        	moveTaskToBack(true);
 	        }
 	    });
 	    alertDialog.setNegativeButton("Cansel", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 
 			}
 		});
-	    // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ繧､繝吶Φ繝・
+	    // 郢ｧ�ｽｭ郢晢ｽ｣郢晢ｽｳ郢ｧ�ｽｻ郢晢ｽｫ郢ｧ�ｽ､郢晏生ﾎｦ郢昴�ｻ
 	    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 	        public void onCancel(DialogInterface dialog) {
-	            // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ縺ｮ蜃ｦ逅・
+	            // 郢ｧ�ｽｭ郢晢ｽ｣郢晢ｽｳ郢ｧ�ｽｻ郢晢ｽｫ邵ｺ�ｽｮ陷�ｽｦ騾�繝ｻ
 	        }
 	    });
 	    alertDialog.show();

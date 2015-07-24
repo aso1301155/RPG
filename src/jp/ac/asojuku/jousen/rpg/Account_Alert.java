@@ -20,14 +20,14 @@ public class Account_Alert extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.account_alert);
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 		super.onResume();
 		dbm = new DBManager(this);
 		sqlDB = dbm.getWritableDatabase();
@@ -47,12 +47,12 @@ public class Account_Alert extends Activity {
 		text_n.setText(name);
 
 		ImageView img = (ImageView)findViewById(R.id.acccount_job);
-		if(job.equals("謌ｦ螢ｫ")){
+		if(job.equals("戦士")){
 			Resources res = getResources();
 			Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.sensi);
 
 			img.setImageBitmap(bmp);
-		}else if(job.equals("鬲泌ｰ主｣ｫ")){
+		}else if(job.equals("魔導士")){
 			Resources res = getResources();
 			Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.majo);
 
@@ -64,7 +64,7 @@ public class Account_Alert extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent ok = new Intent(Account_Alert.this,Behavior_Select.class	);
 				startActivity(ok);
 			}
@@ -76,7 +76,7 @@ public class Account_Alert extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 				Intent back = new Intent(Account_Alert.this, New_Account.class);
 				startActivity(back);
 			}

@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO 自動生成されたメソッド・スタブ
+				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝�繝峨�ｻ繧ｹ繧ｿ繝�
 				Intent intent = new Intent(MainActivity.this,New_Account.class);
 				startActivity(intent);
 			}
@@ -53,27 +53,27 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO 自動生成されたメソッド・スタブ
+		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝�繝峨�ｻ繧ｹ繧ｿ繝�
 	    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 	    alertDialog.setTitle("アプリ終了");
 	    alertDialog.setMessage("終了しますか？");
 	    alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 	        public void onClick(DialogInterface dialog, int whichButton) {
-	            // ボタン押下時の処理
+	            // 繝懊ち繝ｳ謚ｼ荳区凾縺ｮ蜃ｦ逅�
 	        	moveTaskToBack(true);
 	        }
 	    });
 	    alertDialog.setNegativeButton("Cansel", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO 自動生成されたメソッド・スタブ
+				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝�繝峨�ｻ繧ｹ繧ｿ繝�
 
 			}
 		});
-	    // キャンセルイベント
+	    // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ繧､繝吶Φ繝�
 	    alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 	        public void onCancel(DialogInterface dialog) {
-	            // キャンセルの処理
+	            // 繧ｭ繝｣繝ｳ繧ｻ繝ｫ縺ｮ蜃ｦ逅�
 	        }
 	    });
 	    alertDialog.show();

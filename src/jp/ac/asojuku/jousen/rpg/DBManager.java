@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DBManager extends SQLiteOpenHelper {
 
-	/* (髱・Javadoc)
+	/* (鬮ｱ繝ｻJavadoc)
 	 * @see android.database.sqlite.SQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
 	 */
 
@@ -24,22 +24,26 @@ public class DBManager extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 
 		db.execSQL("create table if not exists player(player_id integer primary key autoincrement, name text, job_id integer)");
 		db.execSQL("insert into Player (player_id) values (1)");
 
 		db.execSQL("create table if not exists job(job_id integer primary key autoincrement, name text, hp integer, atk integer, mag integer)");
-		db.execSQL("insert into job (name, hp, atk, mag) values ('謌ｦ螢ｫ', " + 150 + ", " + 15 + ", " + 20 + ")");
-		db.execSQL("insert into job (name, hp, atk, mag) values ('鬲泌ｰ主｣ｫ', " + 100 + ", " + 10 + ", " + 1000 + ")");
+		db.execSQL("insert into job (name, hp, atk, mag) values ('戦士', " + 150 + ", " + 15 + ", " + 20 + ")");
+		db.execSQL("insert into job (name, hp, atk, mag) values ('魔導士', " + 100 + ", " + 10 + ", " + 1000 + ")");
+
+		db.execSQL("create table if not exists enemy(enemy_id integer primary key autoincrement, name text, hp integer, atk integer, mag integer)");
+		db.execSQL("insert into enemy (name, hp, atk, mag) values ('ザコ', " + 100 + ", " + 10 + ", " + 20 + ")");
+		db.execSQL("insert into enemy (name, hp, atk, mag) values ('中ボス', " + 500 + ", " + 30 + ", " + 1000 + ")");
 	}
 
-	/* (髱・Javadoc)
+	/* (鬮ｱ繝ｻJavadoc)
 	 * @see android.database.sqlite.SQLiteOpenHelper#onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
+		// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
 		db.execSQL("DROP TABLE player");
 		onCreate(db);
 	}
@@ -66,8 +70,12 @@ public class DBManager extends SQLiteOpenHelper {
 		db.execSQL("insert into Player (player_id) values (1)");
 
 		db.execSQL("create table if not exists job(job_id integer primary key autoincrement, name text, hp integer, atk integer, mag integer)");
-		db.execSQL("insert into job (name, hp, atk, mag) values ('謌ｦ螢ｫ', " + 150 + ", " + 15 + ", " + 20 + ")");
-		db.execSQL("insert into job (name, hp, atk, mag) values ('鬲泌ｰ主｣ｫ', " + 100 + ", " + 10 + ", " + 1000 + ")");
+		db.execSQL("insert into job (name, hp, atk, mag) values ('戦士', " + 150 + ", " + 15 + ", " + 20 + ")");
+		db.execSQL("insert into job (name, hp, atk, mag) values ('魔導士', " + 100 + ", " + 10 + ", " + 1000 + ")");
+
+		db.execSQL("create table if not exists enemy(enemy_id integer primary key autoincrement, name text, hp integer, atk integer, mag integer)");
+		db.execSQL("insert into enemy (name, hp, atk, mag) values ('ザコ', " + 100 + ", " + 10 + ", " + 20 + ")");
+		db.execSQL("insert into enemy (name, hp, atk, mag) values ('中ボス', " + 500 + ", " + 30 + ", " + 1000 + ")");
 
 	}
 
@@ -113,6 +121,13 @@ public class DBManager extends SQLiteOpenHelper {
 		String sql = "update player set job_id = 2 where player_id = 1";
 		db.execSQL(sql);
 
+	}
+	public SQLiteCursor selectEnemyHp(SQLiteDatabase db){
+		String sql = "select hp from enemy where enemy_id = 1";
+
+		SQLiteCursor cursor = (SQLiteCursor)db.rawQuery(sql, null);
+
+		return cursor;
 	}
 
 }
