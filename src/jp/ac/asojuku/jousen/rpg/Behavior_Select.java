@@ -45,8 +45,7 @@ public class Behavior_Select extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO 髢ｾ�ｽｪ陷肴�募�ｽ隰瑚�鯉ｼ�郢ｧ蠕娯螺郢晢ｽ｡郢ｧ�ｽｽ郢昴�ｻ繝ｩ郢晢ｽｻ郢ｧ�ｽｹ郢ｧ�ｽｿ郢昴�ｻ
-				Intent button_soubi = new Intent(Behavior_Select.this,Weapon.class);
-				startActivity(button_soubi);
+
 			}
 		});
 

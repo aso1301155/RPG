@@ -72,13 +72,15 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
 
             <TextView
                 android:id="@+id/title_name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="名前" />
+                android:text="名前"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/title_name"
@@ -86,14 +88,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="TextView"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/title_job_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="職業" />
+                android:layout_marginLeft="30dp"
+                android:text="職業"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/title_job"
@@ -101,7 +105,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="TextView"
+                android:textColor="#000000"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <TableLayout
@@ -109,7 +115,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="22dp" >
+            android:layout_marginTop="22dp"
+            android:gravity="center_horizontal" >
 
             <TableRow
                 android:id="@+id/tableRow5"
@@ -120,7 +127,8 @@
                     android:id="@+id/title_hp_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HP" />
+                    android:text="HP"
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/title_hp"
@@ -128,14 +136,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="TextView"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/title_mp_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="MP" />
+                    android:layout_marginLeft="70dp"
+                    android:text="MP"
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/title_mp"
@@ -143,7 +153,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="TextView"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
+
             </TableRow>
         </TableLayout>
     </LinearLayout>

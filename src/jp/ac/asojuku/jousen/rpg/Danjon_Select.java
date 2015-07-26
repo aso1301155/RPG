@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class Danjon_Select extends Activity {
+
+	private Button danjon;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
@@ -18,6 +21,8 @@ public class Danjon_Select extends Activity {
 	protected void onResume() {
 		// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 		super.onResume();
+
+		danjon = (Button)findViewById(R.id.what_legend);
 
 
 		Button btn_m = (Button)findViewById(R.id.button_main);
@@ -62,6 +67,7 @@ public class Danjon_Select extends Activity {
 			public void onClick(View v) {
 				// TODO 閾ｪ蜍慕函謌舌＆繧後◆繝｡繧ｽ繝・ラ繝ｻ繧ｹ繧ｿ繝・
 				Intent what_legend = new Intent(Danjon_Select.this,Battle_Scene.class);
+				what_legend.putExtra("danjon_name", danjon.getText().toString());
 				startActivity(what_legend);
 			}
 		});

@@ -29,6 +29,7 @@
     <activity android:name=".Danjon_Select" android:label="@string/app_name"></activity>
     <activity android:label="@string/app_name" android:name=".Battle_Scene"></activity>
     <activity android:label="@string/app_name" android:name=".Weapon"></activity>
-    <activity android:name=".OptionActivity" android:label="@string/app_name"></activity></application>
+    <activity android:name=".OptionActivity" android:label="@string/app_name"></activity>
+    <activity android:name=".ResultActivity" android:label="@string/app_name"></activity></application>
 
 </manifest>

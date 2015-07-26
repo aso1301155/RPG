@@ -85,7 +85,7 @@ public class OptionActivity extends Activity{
 			        public void onClick(DialogInterface dialog, int whichButton) {
 			            // 郢晄㈱縺｡郢晢ｽｳ隰夲ｽｼ闕ｳ蛹ｺ蜃ｾ邵ｺ�ｽｮ陷�ｽｦ騾�繝ｻ
 						String name = edit.getText().toString();
-						if(edit != null)dbm.insertName(sqlDB, name);
+						if(edit != null)dbm.updateName(sqlDB, name);
 						edit.setText("");
 			        }
 			    });
