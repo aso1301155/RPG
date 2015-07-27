@@ -35,6 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_main"
+            android:enabled="false"
             android:text="装備" />
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_main"
+            android:enabled="false"
             android:text="ステータス" />
 
         <Button

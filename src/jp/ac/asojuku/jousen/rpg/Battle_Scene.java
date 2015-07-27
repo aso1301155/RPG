@@ -46,6 +46,7 @@ public class Battle_Scene extends Activity {
 	private int player_hp;
 	private int enemy_hp;
 	private int player_mp;
+	private int mp_max;
 	private int heal;
 	private int heal_cnt;
 	private int heal_max;
@@ -90,6 +91,7 @@ public class Battle_Scene extends Activity {
 		heal_max = player_hp;
 		enemy_hp = Integer.parseInt(enemy);
 		player_mp = Integer.parseInt(mp);
+		mp_max = player_mp;
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar_hp);
         progressBar.setMax(enemy_hp);
@@ -101,8 +103,8 @@ public class Battle_Scene extends Activity {
         mp_p = (TextView)findViewById(R.id.battle_mp);
 
         hp_e.setText(enemy_hp + "/" + enemy_hp);
-        hp_p.setText("HP " + player_hp);
-        mp_p.setText("MP " + player_mp);
+        hp_p.setText("HP " + player_hp + "/" + heal_max);
+        mp_p.setText("MP " + player_mp + "/" + mp_max);
 
 		img = (ImageView) findViewById(R.id.imageView1);
 		Resources res = getResources();
@@ -163,11 +165,11 @@ public class Battle_Scene extends Activity {
 
 			    Dialog.setTitle("魔法");
 			    Dialog.setMessage("魔法を選択してください");
-			    Dialog.setPositiveButton("火炎", new DialogInterface.OnClickListener() {
+			    Dialog.setPositiveButton("火", new DialogInterface.OnClickListener() {
 			        public void onClick(DialogInterface dialog, int whichButton) {
 
 			        	player_mp -= 5;
-			        	mp_p.setText("MP " + player_mp);
+			            mp_p.setText("MP " + player_mp + "/" + mp_max);
 
 						int max = progressBar.getMax();
 
@@ -196,14 +198,14 @@ public class Battle_Scene extends Activity {
 			        }
 			    });
 
-			    Dialog.setNeutralButton("氷結", new OnClickListener() {
+			    Dialog.setNeutralButton("氷", new OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO 自動生成されたメソッド・スタブ
 
 			        	player_mp -= 5;
-			        	mp_p.setText("MP " + player_mp);
+			            mp_p.setText("MP " + player_mp + "/" + mp_max);
 
 						int max = progressBar.getMax();
 
@@ -232,12 +234,12 @@ public class Battle_Scene extends Activity {
 					}
 				});
 
-			    Dialog.setNegativeButton("雷撃", new OnClickListener() {
+			    Dialog.setNegativeButton("雷", new OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 
 			        	player_mp -= 5;
-			        	mp_p.setText("MP " + player_mp);
+			            mp_p.setText("MP " + player_mp + "/" + mp_max);
 
 						int max = progressBar.getMax();
 
@@ -289,16 +291,16 @@ public class Battle_Scene extends Activity {
 			        public void onClick(DialogInterface dialog, int whichButton) {
 
 		        		if(player_hp + heal > heal_max)
-				        	 player_hp = heal_max;
+				        	player_hp = heal_max;
 		        		else
 		        			player_hp += heal;
 
-			        	 hp_p.setText("HP " + player_hp);
-			        	 heal_cnt--;
+		                hp_p.setText("HP " + player_hp + "/" + heal_max);
+			        	heal_cnt--;
 
-			        	 if(heal_cnt == 0){
+			        	if(heal_cnt == 0){
 			        		 item.setEnabled(false);
-			        	 }
+			        	}
 			        }
 			    });
 			    Portion.setNegativeButton("いいえ", new OnClickListener() {
@@ -353,7 +355,7 @@ public class Battle_Scene extends Activity {
 		@Override
 		public void run() {
 			player_hp -= 10;
-			hp_p.setText("HP " + player_hp);
+	        hp_p.setText("HP " + player_hp + "/" + heal_max);
 		}
 	};
 

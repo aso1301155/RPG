@@ -80,6 +80,7 @@
             android:id="@+id/battle_hp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="HP 100"
             android:textColor="#000000" />
 
@@ -87,8 +88,10 @@
             android:id="@+id/battle_mp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="MP 100"
             android:textColor="#000000" />
+
     </LinearLayout>
 
     <LinearLayout
