@@ -2,6 +2,7 @@ package jp.ac.asojuku.jousen.rpg;
 
 import java.util.Random;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -28,16 +29,27 @@ public class Battle_Scene extends Activity {
 
     private AlertDialog.Builder alertDialog;
     private AlertDialog.Builder Dialog;
+    private AlertDialog.Builder Portion;
+
     private ProgressBar progressBar;
+    private Button item;
+	private Button magic;
+
 	private SQLiteDatabase sqlDB;
 	DBManager dbm;
+
 	private ImageView img;
 	private TextView hp_e;
 	private TextView hp_p;
 	private TextView mp_p;
+
 	private int player_hp;
 	private int enemy_hp;
 	private int player_mp;
+	private int heal;
+	private int heal_cnt;
+	private int heal_max;
+
 	private AlphaAnimation alpha;
 	private String danjon_name;
 
@@ -47,6 +59,7 @@ public class Battle_Scene extends Activity {
 		setContentView(R.layout.battle_scene);
 		}
 
+	@SuppressLint("ShowToast")
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -72,6 +85,9 @@ public class Battle_Scene extends Activity {
 		String mp = cursor_m.getString(cursor_m.getColumnIndex("mag"));
 
 		player_hp = Integer.parseInt(player);
+		heal = (int) (player_hp * 0.5);
+		heal_cnt = 3;
+		heal_max = player_hp;
 		enemy_hp = Integer.parseInt(enemy);
 		player_mp = Integer.parseInt(mp);
 
@@ -131,7 +147,7 @@ public class Battle_Scene extends Activity {
 		});
 
 		Dialog = new AlertDialog.Builder(this);
-		Button magic = (Button)findViewById(R.id.magic);
+		magic = (Button)findViewById(R.id.magic);
 		magic.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -151,7 +167,7 @@ public class Battle_Scene extends Activity {
 			        public void onClick(DialogInterface dialog, int whichButton) {
 
 			        	player_mp -= 5;
-			        	mp_p.setText(player_mp);
+			        	mp_p.setText("MP " + player_mp);
 
 						int max = progressBar.getMax();
 
@@ -172,6 +188,11 @@ public class Battle_Scene extends Activity {
 							intent.putExtra("danjon_name", danjon_name);
 							startActivity(intent);
 						}
+
+					    if(player_mp < 5){
+					    	magic.setEnabled(false);
+					    }
+
 			        }
 			    });
 
@@ -182,7 +203,7 @@ public class Battle_Scene extends Activity {
 						// TODO 自動生成されたメソッド・スタブ
 
 			        	player_mp -= 5;
-			        	mp_p.setText(player_mp);
+			        	mp_p.setText("MP " + player_mp);
 
 						int max = progressBar.getMax();
 
@@ -203,6 +224,11 @@ public class Battle_Scene extends Activity {
 							intent.putExtra("danjon_name", danjon_name);
 							startActivity(intent);
 						}
+
+					    if(player_mp < 5){
+					    	magic.setEnabled(false);
+					    }
+
 					}
 				});
 
@@ -211,7 +237,7 @@ public class Battle_Scene extends Activity {
 					public void onClick(DialogInterface dialog, int which) {
 
 			        	player_mp -= 5;
-			        	mp_p.setText(player_mp);
+			        	mp_p.setText("MP " + player_mp);
 
 						int max = progressBar.getMax();
 
@@ -232,6 +258,11 @@ public class Battle_Scene extends Activity {
 							intent.putExtra("danjon_name", danjon_name);
 							startActivity(intent);
 						}
+
+					    if(player_mp < 5){
+					    	magic.setEnabled(false);
+					    }
+
 					}
 				});
 			    Dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -239,7 +270,50 @@ public class Battle_Scene extends Activity {
 
 			        }
 			    });
+
+
 			    Dialog.show();
+			}
+		});
+
+		Portion = new AlertDialog.Builder(this);
+		item = (Button)findViewById(R.id.item);
+		item.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO 自動生成されたメソッド・スタブ
+			    Portion.setTitle("HP回復");
+			    Portion.setMessage("回復しますか？　残り：" + heal_cnt);
+			    Portion.setPositiveButton("はい", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int whichButton) {
+
+		        		if(player_hp + heal > heal_max)
+				        	 player_hp = heal_max;
+		        		else
+		        			player_hp += heal;
+
+			        	 hp_p.setText("HP " + player_hp);
+			        	 heal_cnt--;
+
+			        	 if(heal_cnt == 0){
+			        		 item.setEnabled(false);
+			        	 }
+			        }
+			    });
+			    Portion.setNegativeButton("いいえ", new OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+
+					}
+				});
+			    Portion.setOnCancelListener(new DialogInterface.OnCancelListener() {
+			        public void onCancel(DialogInterface dialog) {
+
+			        }
+			    });
+			    Portion.show();
+
 			}
 		});
 

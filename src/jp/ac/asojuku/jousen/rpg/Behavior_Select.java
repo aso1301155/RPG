@@ -39,7 +39,7 @@ public class Behavior_Select extends Activity {
 			}
 		});
 
-		Button button_soubi = (Button)findViewById(R.id.button_soubi);
+/*		Button button_soubi = (Button)findViewById(R.id.button_soubi);
 		button_soubi.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -48,7 +48,7 @@ public class Behavior_Select extends Activity {
 
 			}
 		});
-
+*/
 		Button btn_m = (Button)findViewById(R.id.button_main);
 		btn_m.setOnClickListener(new View.OnClickListener() {
 

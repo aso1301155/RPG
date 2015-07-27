@@ -32,7 +32,7 @@
                 android:textSize="40dp" />
 
             <Button
-                android:id="@+id/tool"
+                android:id="@+id/item"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="道具"

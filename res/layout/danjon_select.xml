@@ -31,6 +31,7 @@
             android:id="@+id/scrollView1"
             android:layout_width="match_parent"
             android:layout_height="373dp"
+            android:layout_marginTop="10dp"
             android:background="#CC456456" >
 
             <LinearLayout
@@ -42,19 +43,21 @@
                     android:id="@+id/what_legend"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="伝説って？" />
+                    android:text="はじまりの森" />
 
                 <Button
                     android:id="@+id/dangeon2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ああ！！" />
+                    android:enabled="false"
+                    android:text="迷いの森" />
 
                 <Button
                     android:id="@+id/dangeon3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="それって、ハネクリボー？" />
+                    android:enabled="false"
+                    android:text="黄昏の森" />
 
             </LinearLayout>
         </ScrollView>
